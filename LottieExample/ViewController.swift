@@ -23,28 +23,35 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     setupAnimation()
     setupLabel()
+    
     self.view.addSubview(animationView)
     self.view.addSubview(progressBar)
     self.view.addSubview(progressLabel)
-
+    
     DispatchQueue.main.async {
-      if self.animationView.isAnimationPlaying {
-      print(self.animationView.animationProgress)
-      }
       self.progressBar.progress = Float(self.animationView.animationProgress)
       self.progressLabel.text = String(Float(self.animationView.animationProgress))
     }
   }
   
-  @objc func handlePan(reckognizer: UIPanGestureRecognizer){
+  @objc func handlePan(reckognizer: UIPanGestureRecognizer) {
     let translation = reckognizer.translation(in: self.view)
     let progress = translation.x / self.view.bounds.size.width
     
     animationView.animationProgress = progress
-    
+   // animationView.play()
+    progressLabel.text = "\(animationView.animationProgress)"
     animationView.play()
+    
   }
   
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let progress = scrollView.contentOffset.x / scrollView.contentSize.width
+    
+    animationView.animationProgress = progress
+    progressBar.progress = Float(progress)
+    progressLabel.text = "\(progress)"
+  }
   
   func setupAnimation() {
     animationView.loopAnimation = true
