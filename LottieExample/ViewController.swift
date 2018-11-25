@@ -7,12 +7,61 @@
 //
 
 import UIKit
+import Lottie
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIScrollViewDelegate {
+  
+  let animationView = LOTAnimationView(name: "icons")
+  let progressBar = UIProgressView()
+  var progressLabel = UILabel()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(reckognizer:)))
+    self.view.addGestureRecognizer(panGesture)
+    
+    setupAnimation()
+    setupLabel()
+    self.view.addSubview(animationView)
+    self.view.addSubview(progressBar)
+    self.view.addSubview(progressLabel)
+
+    DispatchQueue.main.async {
+      if self.animationView.isAnimationPlaying {
+      print(self.animationView.animationProgress)
+      }
+      self.progressBar.progress = Float(self.animationView.animationProgress)
+      self.progressLabel.text = String(Float(self.animationView.animationProgress))
+    }
+  }
+  
+  @objc func handlePan(reckognizer: UIPanGestureRecognizer){
+    let translation = reckognizer.translation(in: self.view)
+    let progress = translation.x / self.view.bounds.size.width
+    
+    animationView.animationProgress = progress
+    
+    animationView.play()
+  }
+  
+  
+  func setupAnimation() {
+    animationView.loopAnimation = true
+    animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width , height: view.bounds.size.height)
+    animationView.contentMode = .scaleAspectFit
+    animationView.backgroundColor = UIColor.cyan
+    
+    animationView.play()
+  }
+  
+  
+  func setupLabel() {
+    progressLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2, y: 100, width: 100, height: 100))
+    progressLabel.center = CGPoint(x: self.view.frame.size.width/2, y: 100)
+    progressLabel.text = "TEST"
+    
+    progressBar.frame = CGRect(x: 0, y: 0, width: 200, height: 15)
   }
 
 
