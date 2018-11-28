@@ -11,9 +11,10 @@ import Lottie
 
 class ViewController: UIViewController, UIScrollViewDelegate {
   
-  let animationView = LOTAnimationView(name: "icons")
-  let progressBar = UIProgressView()
-  var progressLabel = UILabel()
+  @IBOutlet weak var scrollView: UIScrollView!
+  let animationView = LOTAnimationView(name: "data")
+  let eggStates = ["Soft Boiled", "Medium Boiled", "Hard XD Boiled"]
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,54 +23,62 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     self.view.addGestureRecognizer(panGesture)
     
     setupAnimation()
-    setupLabel()
+    setupScrollView()
     
     self.view.addSubview(animationView)
-    self.view.addSubview(progressBar)
-    self.view.addSubview(progressLabel)
-    
-    DispatchQueue.main.async {
-      self.progressBar.progress = Float(self.animationView.animationProgress)
-      self.progressLabel.text = String(Float(self.animationView.animationProgress))
-    }
+    self.view.bringSubviewToFront(scrollView)
   }
+  
+  
   
   @objc func handlePan(reckognizer: UIPanGestureRecognizer) {
     let translation = reckognizer.translation(in: self.view)
     let progress = translation.x / self.view.bounds.size.width
     
     animationView.animationProgress = progress
-   // animationView.play()
-    progressLabel.text = "\(animationView.animationProgress)"
     animationView.play()
+  }
+  
+  
+  
+  func setupScrollView() {
+    scrollView.delegate = self
+    scrollView.contentSize = CGSize(width: self.view.frame.width * CGFloat(eggStates.count),
+                                    height: scrollView.frame.size.height)
+    
+    for item in 0 ... eggStates.count-1 {
+      let label = UILabel(frame: CGRect(x: (scrollView.contentSize.width / CGFloat(eggStates.count)) * CGFloat(item),
+                                        y: 50,
+                                        width: self.scrollView.contentSize.width / CGFloat(eggStates.count),
+                                        height: 15))
+      label.text = eggStates[item]
+      label.textAlignment = .center
+      label.font = UIFont.systemFont(ofSize: 20)
+      label.textColor = UIColor.red
+      
+      scrollView.addSubview(label)
+    }
     
   }
   
+  
+  
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     let progress = scrollView.contentOffset.x / scrollView.contentSize.width
-    
     animationView.animationProgress = progress
-    progressBar.progress = Float(progress)
-    progressLabel.text = "\(progress)"
   }
+  
+  
   
   func setupAnimation() {
     animationView.loopAnimation = true
     animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width , height: view.bounds.size.height)
     animationView.contentMode = .scaleAspectFit
-    animationView.backgroundColor = UIColor.cyan
+    animationView.backgroundColor = UIColor.gray
     
     animationView.play()
   }
-  
-  
-  func setupLabel() {
-    progressLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2, y: 100, width: 100, height: 100))
-    progressLabel.center = CGPoint(x: self.view.frame.size.width/2, y: 100)
-    progressLabel.text = "TEST"
-    
-    progressBar.frame = CGRect(x: 0, y: 0, width: 200, height: 15)
-  }
+
 
 
 }

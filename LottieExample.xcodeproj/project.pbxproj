@@ -13,6 +13,7 @@
 		D7260D4121AAD88800AC7EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4021AAD88800AC7EA3 /* Assets.xcassets */; };
 		D7260D4421AAD88800AC7EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4221AAD88800AC7EA3 /* LaunchScreen.storyboard */; };
 		D7260D4C21AADA8000AC7EA3 /* icons.json in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4B21AADA8000AC7EA3 /* icons.json */; };
+		D735624821AEF991006B33CF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D735624721AEF991006B33CF /* data.json */; };
 		F33B51B7970452147E9B5948 /* Pods_LottieExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C6108927BC1D202ABB025B /* Pods_LottieExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		D7260D4321AAD88800AC7EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7260D4521AAD88800AC7EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7260D4B21AADA8000AC7EA3 /* icons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons.json; sourceTree = "<group>"; };
+		D735624721AEF991006B33CF /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				D7260D3D21AAD88600AC7EA3 /* Main.storyboard */,
 				D7260D4021AAD88800AC7EA3 /* Assets.xcassets */,
 				D7260D4B21AADA8000AC7EA3 /* icons.json */,
+				D735624721AEF991006B33CF /* data.json */,
 				D7260D4221AAD88800AC7EA3 /* LaunchScreen.storyboard */,
 				D7260D4521AAD88800AC7EA3 /* Info.plist */,
 			);
@@ -154,6 +157,7 @@
 				D7260D4421AAD88800AC7EA3 /* LaunchScreen.storyboard in Resources */,
 				D7260D4121AAD88800AC7EA3 /* Assets.xcassets in Resources */,
 				D7260D4C21AADA8000AC7EA3 /* icons.json in Resources */,
+				D735624821AEF991006B33CF /* data.json in Resources */,
 				D7260D3F21AAD88600AC7EA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
