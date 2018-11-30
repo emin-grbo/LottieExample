@@ -12,8 +12,8 @@
 		D7260D3F21AAD88600AC7EA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7260D3D21AAD88600AC7EA3 /* Main.storyboard */; };
 		D7260D4121AAD88800AC7EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4021AAD88800AC7EA3 /* Assets.xcassets */; };
 		D7260D4421AAD88800AC7EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4221AAD88800AC7EA3 /* LaunchScreen.storyboard */; };
-		D7260D4C21AADA8000AC7EA3 /* icons.json in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4B21AADA8000AC7EA3 /* icons.json */; };
-		D735624821AEF991006B33CF /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D735624721AEF991006B33CF /* data.json */; };
+		D735624A21AF1CC1006B33CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735624921AF1CC1006B33CF /* Extensions.swift */; };
+		D7B346C721B157A400C9E645 /* eggsample.json in Resources */ = {isa = PBXBuildFile; fileRef = D7B346C621B157A400C9E645 /* eggsample.json */; };
 		F33B51B7970452147E9B5948 /* Pods_LottieExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C6108927BC1D202ABB025B /* Pods_LottieExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +28,8 @@
 		D7260D4021AAD88800AC7EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7260D4321AAD88800AC7EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7260D4521AAD88800AC7EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7260D4B21AADA8000AC7EA3 /* icons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons.json; sourceTree = "<group>"; };
-		D735624721AEF991006B33CF /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		D735624921AF1CC1006B33CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = /Users/roblack/Dropbox/Schwifty/LottieExample/LottieExample/Extensions.swift; sourceTree = "<absolute>"; };
+		D7B346C621B157A400C9E645 /* eggsample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = eggsample.json; path = ../../../../Desktop/eggsample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +85,9 @@
 				D7260D3921AAD88600AC7EA3 /* AppDelegate.swift */,
 				D7260D3B21AAD88600AC7EA3 /* ViewController.swift */,
 				D7260D3D21AAD88600AC7EA3 /* Main.storyboard */,
+				D735624921AF1CC1006B33CF /* Extensions.swift */,
 				D7260D4021AAD88800AC7EA3 /* Assets.xcassets */,
-				D7260D4B21AADA8000AC7EA3 /* icons.json */,
-				D735624721AEF991006B33CF /* data.json */,
+				D7B346C621B157A400C9E645 /* eggsample.json */,
 				D7260D4221AAD88800AC7EA3 /* LaunchScreen.storyboard */,
 				D7260D4521AAD88800AC7EA3 /* Info.plist */,
 			);
@@ -155,9 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7260D4421AAD88800AC7EA3 /* LaunchScreen.storyboard in Resources */,
+				D7B346C721B157A400C9E645 /* eggsample.json in Resources */,
 				D7260D4121AAD88800AC7EA3 /* Assets.xcassets in Resources */,
-				D7260D4C21AADA8000AC7EA3 /* icons.json in Resources */,
-				D735624821AEF991006B33CF /* data.json in Resources */,
 				D7260D3F21AAD88600AC7EA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7260D3C21AAD88600AC7EA3 /* ViewController.swift in Sources */,
+				D735624A21AF1CC1006B33CF /* Extensions.swift in Sources */,
 				D7260D3A21AAD88600AC7EA3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
