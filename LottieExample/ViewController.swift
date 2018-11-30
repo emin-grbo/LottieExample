@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
   
   let animationView = LOTAnimationView(name: "eggsample")
   let eggStates = ["Soft Boiled", "Medium Boiled", "Hard XD Boiled"]
-  var timeRemaining = 0
+  var timeRemaining = 60
   var timer = Timer()
   
   
