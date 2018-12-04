@@ -13,9 +13,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
  
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var timerLabel: UILabel!
+  @IBOutlet weak var startButton: UIButton!
   
-  let animationView = LOTAnimationView(name: "eggsample")
-  let eggStates = ["Soft Boiled", "Medium Boiled", "Hard XD Boiled"]
+  let animationView = LOTAnimationView(name: "data")
+  let eggStates = ["s o f t", "m e d i u m", "h a r d"]
   var timeRemaining = 60
   var timer = Timer()
   
@@ -27,6 +28,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     setupAnimation()
     setupScrollView()
     setupTimer()
+    setupButton()
     
     self.view.addSubview(animationView)
     self.view.sendSubviewToBack(animationView)
@@ -61,13 +63,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     for item in 0 ... eggStates.count-1 {
       let label = UILabel(frame: CGRect(x: (scrollView.contentSize.width / CGFloat(eggStates.count)) * CGFloat(item),
-                                        y: self.view.frame.height - 80,
+                                        y: self.view.frame.height - (self.view.frame.height - 105),
                                         width: self.scrollView.contentSize.width / CGFloat(eggStates.count),
                                         height: 15))
       label.text = eggStates[item]
       label.textAlignment = .center
-      label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-      label.textColor = UIColor.black
+      //label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+      label.textColor = UIColor.white
+      label.font = UIFont(name: "RobotoMono-Bold", size: 16)
+      
       
       scrollView.addSubview(label)
     }
@@ -88,7 +92,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     animationView.loopAnimation = true
     animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width , height: view.bounds.size.height)
     animationView.contentMode = .scaleAspectFit
-    animationView.backgroundColor = UIColor.gray
   }
   
   
@@ -117,6 +120,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     } else {
       print("Fok OF")
     }
+  }
+  
+  func setupButton() {
+    startButton.titleLabel?.textAlignment = .center
+    startButton.layer.cornerRadius = 25
+    startButton.backgroundColor = UIColor.white
+    
+    //startButton.layer.shadowPath = UIBezierPath(rect: startButton.bounds).cgPath
+    startButton.layer.shadowColor = UIColor.black.cgColor
+    startButton.layer.shadowRadius = 0
+    startButton.layer.shadowOffset = CGSize(width: 0, height: 6)
+    startButton.layer.shadowOpacity = 0.2
+    startButton.layer.cornerRadius = 25
   }
 
 
