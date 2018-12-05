@@ -68,7 +68,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                                         height: 15))
       label.text = eggStates[item]
       label.textAlignment = .center
-      //label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
       label.textColor = UIColor.white
       label.font = UIFont(name: "RobotoMono-Bold", size: 16)
       
