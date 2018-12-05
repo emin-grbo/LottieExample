@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
   @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
   
-  let animationView = LOTAnimationView(name: "data")
+  let animationView = LOTAnimationView(name: "eggz")
   let eggStates = ["s o f t", "m e d i u m", "h a r d"]
   var timeRemaining = 60
   var timer = Timer()
@@ -122,6 +122,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
   }
   
+  
+  
   func setupButton() {
     startButton.titleLabel?.textAlignment = .center
     startButton.layer.cornerRadius = 25
@@ -132,7 +134,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     startButton.layer.shadowRadius = 0
     startButton.layer.shadowOffset = CGSize(width: 0, height: 6)
     startButton.layer.shadowOpacity = 0.2
-    startButton.layer.cornerRadius = 25
   }
 
 
