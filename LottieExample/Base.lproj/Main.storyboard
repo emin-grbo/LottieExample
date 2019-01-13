@@ -23,9 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Azb-sr-kid">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Azb-sr-kid">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd7-IB-RbI">
                                 <rect key="frame" x="80" y="478" width="160" height="50"/>
@@ -54,6 +53,10 @@
                             <constraint firstItem="wtE-Tf-awr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="2gl-nv-h3X"/>
                             <constraint firstItem="wtE-Tf-awr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JF2-t2-PbH"/>
                             <constraint firstAttribute="bottom" secondItem="dd7-IB-RbI" secondAttribute="bottom" constant="40" id="Q3D-Ga-pM5"/>
+                            <constraint firstItem="Azb-sr-kid" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U8T-o9-Zy9"/>
+                            <constraint firstItem="Azb-sr-kid" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XMV-uo-Ymb"/>
+                            <constraint firstItem="Azb-sr-kid" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fSi-rT-51y"/>
+                            <constraint firstItem="Azb-sr-kid" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kNg-0f-6P5"/>
                             <constraint firstItem="dd7-IB-RbI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v95-b2-qxS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

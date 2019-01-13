@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
   @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
   
-  let animationView = LOTAnimationView(name: "eggz")
+  let animationView = LOTAnimationView(name: "data")
   let eggStates = ["s o f t", "m e d i u m", "h a r d"]
   var timeRemaining = 60
   var timer = Timer()
@@ -82,14 +82,20 @@ class ViewController: UIViewController, UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     let progress = scrollView.contentOffset.x / scrollView.contentSize.width
     animationView.animationProgress = CGFloat(progress)
-        setupTimer()
+    setupTimer()
+    print(progress)
   }
   
   
   
   func setupAnimation() {
-    animationView.loopAnimation = true
-    animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width , height: view.bounds.size.height)
+    //animationView.play(fromProgress: 0, toProgress: 0.3, withCompletion: nil)
+    animationView.loopAnimation = false
+    //animationView.center = CGPoint(x: view.bounds.width / 2, y: 0)
+    //let nudge = (view.bounds.width - animationView.bounds.width)
+    
+    animationView.frame = CGRect(x: 0, y: 80, width: view.bounds.size.width , height: view.bounds.size.height)
+    animationView.bounds.size.width = view.bounds.size.width * 0.8
     animationView.contentMode = .scaleAspectFit
   }
   

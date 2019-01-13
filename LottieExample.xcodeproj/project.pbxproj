@@ -13,8 +13,8 @@
 		D7260D4121AAD88800AC7EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4021AAD88800AC7EA3 /* Assets.xcassets */; };
 		D7260D4421AAD88800AC7EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7260D4221AAD88800AC7EA3 /* LaunchScreen.storyboard */; };
 		D735624A21AF1CC1006B33CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735624921AF1CC1006B33CF /* Extensions.swift */; };
-		D77DF6D021B8352E004B1E8E /* eggz.json in Resources */ = {isa = PBXBuildFile; fileRef = D77DF6CF21B8352E004B1E8E /* eggz.json */; };
 		D7CF508A21B6D28300A3CF32 /* RobotoMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7CF508921B6D28300A3CF32 /* RobotoMono-Bold.ttf */; };
+		D7F0FEE821EB9B2700A0F705 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D7F0FEE721EB9B2700A0F705 /* data.json */; };
 		F33B51B7970452147E9B5948 /* Pods_LottieExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C6108927BC1D202ABB025B /* Pods_LottieExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +30,8 @@
 		D7260D4321AAD88800AC7EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7260D4521AAD88800AC7EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D735624921AF1CC1006B33CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = /Users/roblack/Dropbox/Schwifty/LottieExample/LottieExample/Extensions.swift; sourceTree = "<absolute>"; };
-		D77DF6CF21B8352E004B1E8E /* eggz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = eggz.json; path = anim/eggz.json; sourceTree = SOURCE_ROOT; };
 		D7CF508921B6D28300A3CF32 /* RobotoMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Bold.ttf"; sourceTree = "<group>"; };
+		D7F0FEE721EB9B2700A0F705 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				D7260D3B21AAD88600AC7EA3 /* ViewController.swift */,
 				D7260D3D21AAD88600AC7EA3 /* Main.storyboard */,
 				D735624921AF1CC1006B33CF /* Extensions.swift */,
+				D7F0FEE721EB9B2700A0F705 /* data.json */,
 				D7260D4021AAD88800AC7EA3 /* Assets.xcassets */,
-				D77DF6CF21B8352E004B1E8E /* eggz.json */,
 				D7260D4221AAD88800AC7EA3 /* LaunchScreen.storyboard */,
 				D7260D4521AAD88800AC7EA3 /* Info.plist */,
 				D7CF508821B6D27700A3CF32 /* fonts */,
@@ -168,8 +168,8 @@
 			files = (
 				D7260D4421AAD88800AC7EA3 /* LaunchScreen.storyboard in Resources */,
 				D7CF508A21B6D28300A3CF32 /* RobotoMono-Bold.ttf in Resources */,
-				D77DF6D021B8352E004B1E8E /* eggz.json in Resources */,
 				D7260D4121AAD88800AC7EA3 /* Assets.xcassets in Resources */,
+				D7F0FEE821EB9B2700A0F705 /* data.json in Resources */,
 				D7260D3F21AAD88600AC7EA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +183,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LottieExample/Pods-LottieExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LottieExample/Pods-LottieExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -192,7 +192,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LottieExample/Pods-LottieExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LottieExample/Pods-LottieExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		45B0880533FD54179642FBB0 /* [CP] Check Pods Manifest.lock */ = {
