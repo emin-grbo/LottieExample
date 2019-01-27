@@ -84,15 +84,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     animationView.animationProgress = CGFloat(progress)
     setupTimer()
     print(progress)
+    print("test")
   }
   
   
   
   func setupAnimation() {
-    //animationView.play(fromProgress: 0, toProgress: 0.3, withCompletion: nil)
+
     animationView.loopAnimation = false
-    //animationView.center = CGPoint(x: view.bounds.width / 2, y: 0)
-    //let nudge = (view.bounds.width - animationView.bounds.width)
     
     animationView.frame = CGRect(x: 0, y: 80, width: view.bounds.size.width , height: view.bounds.size.height)
     animationView.bounds.size.width = view.bounds.size.width * 0.8
