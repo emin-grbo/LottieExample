@@ -4,4 +4,4 @@
 ![Header](https://img.shields.io/badge/swift-4.2-orange.svg)
 
 # LottieExample
-Quick test/example for lottie animaations.
+Quick test/example for lottie animations.
